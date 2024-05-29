@@ -1,0 +1,50 @@
+.wrapper {
+  background: radial-gradient(
+      circle at 15% 20%,
+      rgb(60, 0, 139),
+      rgba(0, 0, 0, 0) 39%
+    ),
+    radial-gradient(
+      circle at 85.57% 43.37%,
+      rgb(60, 0, 139),
+      rgba(0, 0, 0, 0) 39%
+    ),
+    radial-gradient(circle at 50% 50%, rgb(17, 17, 18), rgb(17, 17, 18) 100%);
+}
+.hidden {
+  display: none;
+}
+
+.circle,
+.circle2 {
+  font-size: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, $gradientPink, $gradientPurple);
+  background-color: #ddd;
+  padding: 2.8rem;
+  position: absolute;
+  margin: 0rem -3rem;
+  z-index: 1;
+}
+
+.circle2 {
+  background: linear-gradient(to right, $gradientBlue, $gradientLightBlue);
+}
+
+
+.dots{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: #444;
+}
+.active-dot{
+  background-color: $green;
+}
