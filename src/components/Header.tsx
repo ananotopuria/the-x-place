@@ -1,6 +1,11 @@
 import logo from "../assets/thexplace-logo.png";
+import React, { useState } from "react";
+import Modal from "./Modal";
 
 function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <>
       <div className="wrapper">
@@ -46,9 +51,14 @@ function Header() {
               </li>
               <div className="navigation__btns">
                 <li className="navigation__item">
-                  <a href="#" className="navigation__link-btn1">
+                  <a
+                    href="#"
+                    className="navigation__link-btn1"
+                    onClick={openModal}
+                  >
                     Sign in
                   </a>
+                  <Modal isOpen={isModalOpen} onClose={closeModal} />
                 </li>
                 <li className="navigation__item">
                   <a href="#" className="navigation__link-btn2 green-btn">
@@ -101,9 +111,14 @@ function Header() {
               </div>
               <div className="header__btns">
                 <li className="header__nav-item">
-                  <a href="#" className="header__nav-link sign-in">
+                  <a
+                    href="#"
+                    className="header__nav-link sign-in"
+                    onClick={openModal}
+                  >
                     Sign in
                   </a>
+                  <Modal isOpen={isModalOpen} onClose={closeModal} />
                 </li>
                 <li className="header__nav-item">
                   <a href="#" className="join green-btn">
